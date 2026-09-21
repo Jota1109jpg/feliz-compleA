@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e9b949" />
+    <title>Mi mensaje para ti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="birthday-card" id="birthdayCard" tabindex="0" aria-live="polite">
+      <div class="topline">
+        <span class="eyebrow">PARA TI, CON AMOR</span>
+        <div class="topline-actions">
+          <button class="music-button" id="musicButton" type="button" aria-pressed="false">♫ Activar música</button>
+          <span class="step" id="stepIndicator">01 / 03</span>
+        </div>
+      </div>
+
+      <section class="content intro-view" id="introView">
+        <p class="overline" id="overline">Una pregunta importante</p>
+        <h1 id="message" class="message">¿Sabes de quién es el cumpleaños hoy?</h1>
+        <div class="name-area" id="nameArea" aria-hidden="true"><span class="name-label">Para Anyeli</span></div>
+      </section>
+
+      <section class="menu-view" id="menuView" aria-labelledby="menuTitle" hidden>
+        <p class="overline">Una carta para ti</p>
+        <h1 class="menu-title" id="menuTitle">Tengo algo que quiero decirte.</h1>
+        <div class="options" id="options">
+          <button class="option" type="button" data-section="message">
+            <span class="option-number">01</span>
+            <span class="option-copy"><strong>Mi mensaje para ti</strong><small>Abre la carta</small></span>
+            <span class="option-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="detail-view" id="detailView" hidden>
+        <button class="back-button" id="backButton" type="button">← Volver a la carta</button>
+        <div class="detail-content" id="detailContent"></div>
+      </section>
+
+      <div class="bottomline">
+        <span class="hint" id="hint">Toca la pantalla para continuar</span>
+        <span class="arrow" aria-hidden="true">↓</span>
+      </div>
+    </main>
+    <audio id="loveSong" loop preload="none" src="follow-you.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
